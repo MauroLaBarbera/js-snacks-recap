@@ -35,3 +35,47 @@ browser.tab.forEach((element, index, array) => {
 });
 
 console.log(browser);
+
+/**SNACK 4 -> VUE 
+Partendo da un array di oggetti con i contatti di una rubrica con nome, cognome, numero, attivo (true,false)
+Andiamo a stampare nome cognome e numero dentro una lista.
+Fare in modo poi che i contatti non attivi (attivo: false) siano stampati di colore rosso mentre gli altri normalmente di nero.
+ Cliccando sul numero della persona fate in modo che appaia in console il cognome della persona di cui è stato cliccato il numero */
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        contatti: [
+            {
+                nome: 'Mauro',
+                cognome: 'La Barbera',
+                numero: '3254664656',
+                attivo: false,
+            },
+            {
+                nome: 'Paolo',
+                cognome: 'Duzioni',
+                numero: '3365998745',
+                attivo: true,
+            },
+            {
+                nome: 'Ciccio',
+                cognome: 'Pasticcio',
+                numero: '3894568521',
+                attivo: false,
+            },
+            {
+                nome: 'Rita',
+                cognome: 'Levi Montalcini',
+                numero: '31456652324',
+                attivo: true,
+            },
+            {
+                nome: 'Antonio',
+                cognome: 'Conte',
+                numero: '3216545564',
+                attivo: false,
+            },
+        ],
+    },
+});
