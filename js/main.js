@@ -77,5 +77,14 @@ const app = new Vue({
                 attivo: false,
             },
         ],
+
+        select: 0,
+    },
+
+    methods: {
+        getNumber(index) {
+            this.select = index;
+            console.log(this.contatti[index].cognome);
+        },
     },
 });

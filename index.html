@@ -18,7 +18,8 @@
                 v-for="(contatto, index) in contatti"
                 :class="{rosso:!contatto.attivo}"
             >
-                {{contatto.nome}} {{contatto.cognome}} : {{contatto.numero}}
+                {{contatto.nome}} {{contatto.cognome}} :
+                <span @click="getNumber(index)">{{contatto.numero}}</span>
             </div>
         </div>
 
